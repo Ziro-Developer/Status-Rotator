@@ -1,71 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Status Rotator</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-    }
+===[ HACKER STATUS TERMINAL ]===
 
-    .rotator {
-      font-size: 2rem;
-      text-align: center;
-      padding: 20px 40px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-      backdrop-filter: blur(5px);
-    }
+[+] Estableciendo conexión segura...
+Esperando respuesta del servidor remoto...
 
-    .fade {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
+[*] Escaneando puertos abiertos...
+Puerto 22 abierto (SSH)
+Puerto 80 abierto (HTTP)
+Puerto 443 abierto (HTTPS)
 
-    .fade.show {
-      opacity: 1;
-    }
-  </style>
-</head>
-<body>
+[+] Acceso root obtenido.
+Cargando shell remota...
+Permisos elevados concedidos.
 
-  <div class="rotator">
-    <span id="statusText" class="fade show">Cargando estado...</span>
-  </div>
+[!] Alerta: tráfico sospechoso detectado.
+IP entrante desconocida: 185.73.21.9
+Trazando ubicación...
 
-  <script>
-    const statuses = [
-      "✅ En línea y funcionando",
-      "🔧 Mantenimiento en curso",
-      "🚀 Nuevas funciones disponibles",
-      "📡 Conectando con el servidor...",
-      "⚡ Todo va súper rápido hoy"
-    ];
+[✓] Sistema comprometido con éxito.
+Descargando datos: ██████████ 100%
+Plantando puerta trasera...
 
-    let index = 0;
-    const statusText = document.getElementById("statusText");
-
-    function rotateStatus() {
-      statusText.classList.remove("show");
-      setTimeout(() => {
-        index = (index + 1) % statuses.length;
-        statusText.textContent = statuses[index];
-        statusText.classList.add("show");
-      }, 500);
-    }
-
-    setInterval(rotateStatus, 3000);
-  </script>
-
-</body>
-</html>
+[✔] Cerrando sesión. Hackeo completado.
+Eliminando huellas digitales...
+Desconectado con éxito.
