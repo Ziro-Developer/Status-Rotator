@@ -1,12 +1,59 @@
-===[ ZIRO STATUS ROTATOR ]===
+# Status Rotator
 
-[+] Cambiando status a: "🌐 Conectando al servidor..."
+Status Rotator is a simple Discord bot that rotates the bot's status in a loop. It is built using `discord.py-self`, allowing you to run it with a self-bot token. The bot statuses are customizable via a `config.json` file.
 
-[*] Cambiando status a: "📡 Analizando paquetes..."
+## Features
 
-[✓] Cambiando status a: "🤖 Bot operativo 24/7"
+- Rotates bot statuses in a loop
+- Customizable statuses list
+- Easy to set up and configure
 
-[!] Cambiando status a: "⚠ Mantenimiento en progreso"
+## Requirements
 
-[✔] Cambiando status a: "💾 Respaldando datos..."
+- Python (version 3.10 or above)
+- `discord.py-self` (Python library)
+- `colorama` (Python library for colored terminal text)
 
+## Installation
+
+1. **Clone the repository** or download the source code.
+
+ 
+
+2. **Install the required Python packages**. You can do this by running the following commands:
+
+    ```bash
+    pip install discord
+    pip install discord.py-self
+    pip install colorama
+    ```
+
+    Alternatively, you can install all dependencies using the `requirements.txt` file:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Configure the bot** by creating a `config.json` file in the project directory. The file should look like this:
+
+    ```json
+    {
+        "statuses": ["Status 1 (Aizer)", "Status 2 (Aizer)", "Status 3 (Aizer)"],  // ADD MORE IF YOU WANT 
+        "rtsec": 2,
+        "Token": [""]
+    }
+    
+    ```
+
+    - `token`: Your Discord token (self-bot token).
+    - `statuses`: A list of statuses that the bot will rotate through.
+
+4. **Run the bot** by executing the main script:
+
+    ```bash
+    python status.py
+    ```
+
+## Usage
+
+Once the bot is running, it will start rotating through the statuses defined in the `config.json` file. The status will change automatically at intervals defined in the script.
